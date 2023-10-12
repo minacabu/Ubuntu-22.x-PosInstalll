@@ -39,9 +39,17 @@ flatpak install flathub com.getpostman.Postman -y
 
 ##navegador##
 flatpak install flathub com.microsoft.Edge -y
-flatpak install flathub com.brave.Browser -y
 flatpak install flathub io.gitlab.librewolf-community -y
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y
+
+##outros##
+flatpak install flathub org.gnome.World.PikaBackup -y
+flatpak install flathub io.gitlab.news_flash.NewsFlash -y
+flatpak install flathub com.authy.Authy -y
+flatpak install flathub com.bitwarden.desktop -y
+
+##Office##
+flatpak install flathub org.onlyoffice.desktopeditors -y
 
 ##FTP##
 flatpak install flathub org.filezilla_project.Filezilla -y
@@ -55,8 +63,9 @@ flatpak install flathub org.videolan.VLC -y
 ##dj metade##
 flatpak install flathub com.spotify.Client -y 
 
-##GIMP##
+##Imagem##
 flatpak install flathub org.gimp.GIMP -y
+flatpak install flathub org.upscayl.Upscayl -y
 
 ##virtualização de linux##
 flatpak install flathub org.gnome.Boxes -y 
@@ -101,6 +110,7 @@ sudo apt install flameshot -y
 
 sudo apt install virtualbox -y
 
+sudo apt install docker-ce -y
 
 
 ## Frescura do sistema##
@@ -117,7 +127,7 @@ sudo apt update && sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
-
+sudo apt install gnome-sushi -y
 
 ## mensagem gay##
 sudo apt install neofetch -y
