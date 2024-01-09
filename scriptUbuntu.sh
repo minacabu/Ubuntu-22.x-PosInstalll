@@ -43,10 +43,12 @@ flatpak install flathub io.gitlab.librewolf-community -y
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y
 
 ##outros##
-flatpak install flathub org.gnome.World.PikaBackup -y
 flatpak install flathub io.gitlab.news_flash.NewsFlash -y
 flatpak install flathub com.authy.Authy -y
 flatpak install flathub com.bitwarden.desktop -y
+flatpak install flathub org.telegram.desktop -y
+flatpak install flathub in.srev.guiscrcpy -y
+flatpak install flathub org.qbittorrent.qBittorrent -y
 
 ##Office##
 flatpak install flathub org.onlyoffice.desktopeditors -y
@@ -60,15 +62,13 @@ flatpak install flathub com.obsproject.Studio -y
 ##VLC##
 flatpak install flathub org.videolan.VLC -y
 
-##dj metade##
-flatpak install flathub com.spotify.Client -y 
 
 ##Imagem##
 flatpak install flathub org.gimp.GIMP -y
 flatpak install flathub org.upscayl.Upscayl -y
 
 ##virtualização de linux##
-flatpak install flathub org.gnome.Boxes -y 
+sudo apt install virtualbox -y
 
 ##Discord##
 flatpak install flathub com.discordapp.Discord -y
@@ -88,9 +88,13 @@ flatpak install flathub md.obsidian.Obsidian -y
 ##Jogos#
 flatpak install flathub net.lutris.Lutris -y
 flatpak install flathub com.valvesoftware.Steam -y
+flatpak install flathub com.heroicgameslauncher.hgl -y
 
-##Backup##
-flatpak install flathub org.gnome.World.PikaBackup -y
+##VPN##
+flatpak install flathub com.protonvpn.www -y
+
+##Teams##
+flatpak install flathub com.github.IsmaelMartinez.teams_for_linux -y
 
 ##Nuvem##
 wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb && sudo apt install "$PWD/megasync-xUbuntu_22.04_amd64.deb" -y
@@ -98,17 +102,14 @@ wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64
 ##Firewall##
 wget https://updates.safing.io/latest/linux_amd64/packages/portmaster-installer.deb && sudo apt installl "$PWD/portmaster-installer.deb" -y
 
-sudo apt update -y
 
 ##gerenciador de temas##
-sudo apt install -y gnome-tweaksy
+sudo apt install gnome-tweaks -y
+
 ##ferramentas de redes##
 sudo apt install net-tools -y
 
 sudo apt install flameshot -y
-
-
-sudo apt install virtualbox -y
 
 sudo apt install docker-ce -y
 
@@ -123,10 +124,15 @@ gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 
 
 ## Finalização, atualização e limpeza##
-sudo apt update && sudo apt dist-upgrade -y
-flatpak update
+sudo apt update 
+sudo apt dist-upgrade -y 
+sudo apt upgrade -y 
+sudo snap refresh 
+sudo flatpak upgrade -y 
+flatpak uninstall --unused 
+sudo apt autoremove -y 
 sudo apt autoclean
-sudo apt autoremove -y
+
 sudo apt install gnome-sushi -y
 
 ## mensagem gay##
