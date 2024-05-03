@@ -109,10 +109,11 @@ sudo apt autoremove -y
 sudo apt autoclean -y
 
 ## Instalando mais programas ##
-sudo apt install gnome-sushi neofetch -y
+sudo apt install gnome-sushi -y
 
 ## Exibindo informações após a instalação ##
-neofetch
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
+fastfetch
 
 echo
 echo
